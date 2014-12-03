@@ -15,7 +15,11 @@ $router->get('/', 'WelcomeController@index');
 
 $router->get('/home', 'HomeController@index');
 
-$router->get('/songs', 'SongsController@index');
+// bind model to controller
+Route::model('song', 'App\Song');
+
+// resource controller, (restful shit automatisch doen)
+Route::resource('songs', 'SongsController'); // same as the 2 above but cleaner :D RESTfull ftw!
 
 /*
 |--------------------------------------------------------------------------

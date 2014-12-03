@@ -1,1 +1,7 @@
-/Users/ricovp/Sites/scotchbox/public/laravel5-playground/resources/views/songs/create.blade.php
+@extends('layouts.app');
+
+@section('content')
+	
+	Create Songs Here
+
+@stop

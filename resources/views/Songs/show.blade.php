@@ -1,1 +1,6 @@
-/Users/ricovp/Sites/scotchbox/public/laravel5-playground/resources/views/songs/show.blade.php
+@extends('layouts.app');
+
+@section('content')
+	<h2>{{$song->title}}</h2>
+	<p>{{$song->lyrics}}</p>
+@stop

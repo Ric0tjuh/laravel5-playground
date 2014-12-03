@@ -1,1 +1,1 @@
-/Users/ricovp/Sites/scotchbox/public/laravel5-playground/resources/views/songs/edit.blade.php
+Edit Songs here
