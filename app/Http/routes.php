@@ -15,6 +15,8 @@ $router->get('/', 'WelcomeController@index');
 
 $router->get('/home', 'HomeController@index');
 
+$router->get('/songs', 'SongsController@index');
+
 /*
 |--------------------------------------------------------------------------
 | Authentication & Password Reset Controllers
