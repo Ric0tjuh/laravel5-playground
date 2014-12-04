@@ -18,8 +18,8 @@ $router->get('/home', 'HomeController@index');
 // bind model to controller
 Route::model('song', 'App\Song');
 
-// resource controller, (restful shit automatisch doen)
-Route::resource('songs', 'SongsController'); // same as the 2 above but cleaner :D RESTfull ftw!
+// resource controller, (restful shit automatisch doen) (Only of except gebruiken om niet alle 8 de rest shizzles beschikbaar te maken maar alleen degene die we nodig hebben)
+Route::resource('songs', 'SongsController', ['only'=> ['index', 'show', 'edit']]); // same as the 2 above but cleaner :D RESTfull ftw!
 
 /*
 |--------------------------------------------------------------------------

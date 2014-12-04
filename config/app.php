@@ -141,6 +141,9 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
+
+		'Illuminate\Html\HtmlServiceProvider',
 
 	],
 
@@ -199,6 +202,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		
+		'Debugbar' => 'Barryvdh\Debugbar\Facade',
+		'Form'		=> 'Illuminate\Html\FormFacade',
 
 	],
 
