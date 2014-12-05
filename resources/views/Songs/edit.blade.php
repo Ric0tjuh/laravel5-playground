@@ -16,6 +16,4 @@
 
 	{!!Form::close()!!}
 
-
-
 @stop

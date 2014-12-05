@@ -1,9 +1,9 @@
 <?php namespace App\Http\Middleware;
 
-use Closure;
-use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Contracts\Routing\Middleware;
+ use Closure;
+ use Illuminate\Contracts\Auth\Guard;
+ use Illuminate\Http\RedirectResponse;
+ use Illuminate\Contracts\Routing\Middleware;
 
 class RedirectIfAuthenticated implements Middleware {
 
@@ -34,11 +34,14 @@ class RedirectIfAuthenticated implements Middleware {
 	 */
 	public function handle($request, Closure $next)
 	{
+		
 		if ($this->auth->check())
 		{
+			// hij komt niet in deze loop...			
 			return new RedirectResponse(url('/home'));
 		}
 
+		
 		return $next($request);
 	}
 

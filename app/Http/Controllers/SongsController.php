@@ -16,6 +16,10 @@ class SongsController extends Controller {
         //$this->beforeFilter('auth');
 
         $this->song = $song;
+        //$this->middleware('auth')->only('edit');
+
+        //$this->middleware('auth');
+        $this->middleware('auth', ['only' => 'edit']);
 
     }
 
@@ -48,6 +52,7 @@ class SongsController extends Controller {
 	
 	public function show($id)
 	{		
+
 		$song = $this->song->find($id);
 		return view('songs.show', compact('song'));
 	}
@@ -64,6 +69,8 @@ class SongsController extends Controller {
 
 	public function edit($id)
 	{
+		//$this->middleware('auth'); // doesnt seem to work, although it probly should!
+
 		$song = $this->song->find($id);
 		return view('songs.edit', compact('song'));
 	}
@@ -77,7 +84,7 @@ class SongsController extends Controller {
 		// $song ->title = $request->get('title');
 		// $song->save();
 
-		// update more / all (= geil)
+		// update more / all at once (= geil)
 		$song->fill($request->input())->save();
 
 

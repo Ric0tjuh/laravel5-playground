@@ -116,6 +116,7 @@ return [
 		'App\Providers\AppServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'App\Providers\ErrorServiceProvider',
 
 		/*
 		 * Laravel Framework Service Providers...
@@ -144,6 +145,7 @@ return [
 		'Barryvdh\Debugbar\ServiceProvider',
 
 		'Illuminate\Html\HtmlServiceProvider',
+
 
 	],
 
@@ -205,6 +207,7 @@ return [
 		
 		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 		'Form'		=> 'Illuminate\Html\FormFacade',
+		
 
 	],
 
